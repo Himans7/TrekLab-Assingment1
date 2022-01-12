@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="form_popup.css">
+    
+    <script src="emp.js"></script>
+    <script>
+        function openWin() {
+  myWindow = window.open("", "", "width=200, height=100");
+}
+
+function resizeWin() {
+  myWindow.resizeTo(300, 300);
+}
+        </script>
+    
+    
+</head>
+<body>
+    
+    </div>
+    <header class=" headerbar top"><h1>Employees Details</h1></header>
+    <aside class="rightbar">
+        <input class="searchbox" type="search" id="employeeSearch" name="employeeSearch" onkeyup="onSearch()" placeholder="Search Name............">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Employee Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tablerows">
+
+            </tbody>    
+        </table>
+        <a href='emp_reg_page.html'>
+            <button class="bck">
+                back
+            </button>
+        </a>
+
+        <div >
+            <button class="clear" onclick="firstMove('1')">First</button>
+            <button class="clear" onclick="previous()">Prev</button>
+            <button class="clear" onclick="nextMove()">Next</button>
+            <button class="clear" onclick="lastMove()">Last</button>
+        </div>
+        
+    </aside>
+    <footer class="header bottom"></footer>
+     </div>
+     <div style="opacity:0.7;">
+        <div class="form-popup" id="myForm">
+            <form class="form-container" onsubmit="event.preventDefault();" autocomplete="off">
+                <h2><center>Edit Employee</center></h2>
+                
+                <lable>Employee Name</lable>
+                <input type="text" name="fullName" id="fullName">
+
+                <lable>Employee Age</lable>
+                <input type="text" name="employeeAge" id="employeeAge">
+
+
+                <button type="submit" onclick="onsubmitPressed()" class="btn" id="submit">Update</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+     
+<script type="text/javascript">
+    window.onload = init;
+</script>
+
+
+
+</body>
+</html>

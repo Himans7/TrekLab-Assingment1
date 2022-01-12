@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dept.js"></script>
+    <link rel="stylesheet" href="design.css">
+
+    <link rel="stylesheet" href="form_popup.css"
+    
+    
+</head>
+
+<body onload="init()">
+    <div>
+    <header class=" headerbar top"><h1>Department</h1></header>
+    <aside class="rightbar">
+        <input class="searchbox" type="search" id="depSearch" name="departmentSearch" onkeyup="onSearch()" placeholder="Search Department Name...... ">
+        <table class="list" id="depList">
+            <thead>
+                <tr>
+                    <th>Department Name</th>
+                    <th>Department Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="depRows">
+
+            </tbody>    
+        </table>
+        </table> 
+        <a href='dept_reg_page.html'>
+            <button class="bck">
+                back
+            </button>
+        </a>
+
+        <div >
+            <button class="clear" onclick="firstMove('1')">First</button>
+            <button class="clear" onclick="previous()">Prev</button>
+            <button class="clear" onclick="nextMove()">Next</button>
+            <button class="clear" onclick= "lastMove()">Last</button>
+        </div>
+
+        </aside>
+    <footer class="header bottom"></footer>
+    
+    
+
+     <div style="opacity:0.7;">
+        <div class="form-popup" id="depForm">
+            <form class="form-container" onsubmit="event.preventDefault();" autocomplete="off">
+                <h2><center>Edit Department</center></h2>
+
+                <lable>Department Name</lable>
+                <input type="text" name="depName" id="depName">
+
+                <lable>Department Number</lable>
+                <input type="text" name="depNumber" id="depNumber">
+
+                <button type="submit" onclick="onsubmitPressed()" class="btn" id="submits">Update</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+     </div
+        
+</body>
+</html>

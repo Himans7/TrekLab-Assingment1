@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    
+    <script src="emp_reg.js"></script>
+    
+    
+    
+    <title>Document</title>
+
+    <script>
+
+    </script>
+</head>
+<body onload="init()" >
+    
+
+<div class="container">
+<header class=" headerbar top"><h1>Employees Registration</h1></header>
+<aside class="leftbar">
+<div>
+<fieldset>
+<label for="employeeName">Employee Name</label>
+<input type="text" placeholder="enter name" name="fullName" id="fullName">
+</fieldset>
+<fieldset>
+<label for="age">Age</label>
+<input type=" text " placeholder="enter Age" name="employeeAge" id="employeeAge">
+</fieldset>
+<fieldset>
+    <label for="submit"></label>
+    <button id="submit" onclick="onsubmitPressed()">Register</button>
+    <button id="clear" onclick="clearRow()">Clear</button>
+    <a href='index.html'>
+        <button class="bck">
+            Back
+        </button>
+        <a href='emp_Detail_page.html'>
+            <button class="bck">
+            Employee Details
+            </button>
+    </a>
+</fieldset>
+</aside>
+
+<script type="text/javascript">
+    window.onload = init;
+</script>
+
+</body>
+</html>
